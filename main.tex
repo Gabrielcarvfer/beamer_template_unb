@@ -1,0 +1,48 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel} % formatação brasileira e traduções
+
+\def\style{light}% escolha light (claro) ou dark (escuro) / choose either light or dark
+
+% cores utilizadas nas logos / colors used in the logo
+\definecolor{UnBgray}{rgb}{0.13671875, 0.12109375, 0.125}
+\definecolor{UnBgreen}{rgb}{0.0, 0.545098, 0.26171875}
+\definecolor{UnBblue}{rgb}{0.0, 0.2578125, 0.48828125}
+
+\usepackage{fontspec}
+\setmainfont{./UnB-Office_Regular.ttf} % fontes oficiais / official fonts
+
+\def\dark{dark}
+
+\ifx \style \dark
+% definições do tema escuro / dark theme definitions
+\logo{\includegraphics[width=1.5cm]{logo_unb_dark.PNG}}
+
+\setbeamercolor{frametitle}{fg=UnBgreen}
+\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{background canvas}{bg=UnBgray}
+\setbeamercolor{title}{fg=UnBgreen}
+
+\else
+% definições do tema claro / light theme definitions
+\logo{\includegraphics[width=1.5cm]{logo_unb_light.PNG}}
+
+\setbeamercolor{background canvas}{bg=black}
+\setbeamercolor{frametitle}{fg=UnBblue}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{title}{fg=UnBblue}
+\fi
+
+\title{Título}
+\author{Nome}
+\date{\today}
+\institute{Universidade de Brasília}
+
+
+\begin{document}
+\maketitle
+
+
+
+\end{document}
